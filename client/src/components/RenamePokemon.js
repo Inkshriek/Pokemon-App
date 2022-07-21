@@ -33,7 +33,7 @@ class RenamePokemon extends React.Component {
             return; 
         }
 
-        Axios.patch('https://inkshriek.github.io/Pokemon-App-Server/pokemon/' + this.state.ID, {
+        Axios.patch('https://pokemon-app-server.azurewebsites.net/pokemon/' + this.state.ID, {
             team: this.state.team,
             name: this.state.name
             

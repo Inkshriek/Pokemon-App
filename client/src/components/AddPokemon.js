@@ -42,7 +42,7 @@ class AddPokemon extends React.Component {
             return; 
         }
 
-        Axios.put('https://inkshriek.github.io/Pokemon-App-Server/pokemon/' + this.state.ID, {
+        Axios.put('https://pokemon-app-server.azurewebsites.net/pokemon/' + this.state.ID, {
             name: this.state.pokemon.name,
             img: this.state.pokemon.sprites.front_default,
             team: this.state.team

@@ -13,7 +13,7 @@ class PokemonTeam extends React.Component {
     }
 
     componentDidMount() {
-        Axios.get('https://inkshriek.github.io/Pokemon-App-Server/pokemon/' + this.state.team)
+        Axios.get('https://pokemon-app-server.azurewebsites.net/pokemon/' + this.state.team)
         .then( (res) => {
             if (Array.isArray(res.data.pokemon)) {
                 this.setState({teamlist: res.data.pokemon});
@@ -33,7 +33,7 @@ class PokemonTeam extends React.Component {
     number = event => {
         this.setState({team: Math.min(9, Math.max(1, event.target.value))});
 
-        Axios.get('https://inkshriek.github.io/Pokemon-App-Server/pokemon/' + event.target.value)
+        Axios.get('https://pokemon-app-server.azurewebsites.net/pokemon/' + event.target.value)
         .then( (res) => {
             if (Array.isArray(res.data.pokemon)) {
                 this.setState({teamlist: res.data.pokemon});
@@ -51,7 +51,7 @@ class PokemonTeam extends React.Component {
     }
 
     refresh = () => {
-        Axios.get('https://inkshriek.github.io/Pokemon-App-Server/pokemon/' + this.state.team)
+        Axios.get('https://pokemon-app-server.azurewebsites.net/pokemon/' + this.state.team)
         .then( (res) => {
             if (Array.isArray(res.data.pokemon)) {
                 this.setState({teamlist: res.data.pokemon});

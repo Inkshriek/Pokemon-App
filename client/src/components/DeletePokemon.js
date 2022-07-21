@@ -28,7 +28,7 @@ class DeletePokemon extends React.Component {
             return; 
         }
 
-        Axios.delete('https://inkshriek.github.io/Pokemon-App-Server/pokemon/' + this.state.ID + '/' + this.state.team)
+        Axios.delete('https://pokemon-app-server.azurewebsites.net/pokemon/' + this.state.ID + '/' + this.state.team)
         .then( (res) => {
             console.log(res);
             if (res.data.pokemon > 0) {
